@@ -15,7 +15,7 @@ The rule detector and self-trained Isolation Forest are not counted as pre-train
 See [MULTIMODAL.md](MULTIMODAL.md) for installation, operation, model provenance,
 executed smoke-test results and limitations. The original dashboard remains `app.py`.
 
-The expanded suite passes **99 tests**. Any 83-test result below refers to the
+The expanded suite passes **100 tests**. Any 83-test result below refers to the
 earlier baseline run, not the current suite. The 80-scenario detector benchmark
 is unchanged; the new multimodal smoke evaluation is a separate development experiment.
 
@@ -87,6 +87,7 @@ CyberTriage_FYP/
     ├── test_dataset.py
     ├── test_config.py
     ├── test_export.py
+    ├── test_pdf_generator.py
     ├── test_performance.py
     ├── test_multimodal.py
     └── test_report.py
@@ -119,8 +120,8 @@ Then in the dashboard you can:
 pytest
 ```
 
-The current suite contains 99 tests (83 original, 15 multimodal contracts and
-one unfitted-model comparison regression) covering the original pipeline,
+The current suite contains 100 tests (83 original, 15 multimodal contracts,
+one unfitted-model comparison regression and one real PDF-export regression) covering the original pipeline,
 threshold boundaries, out-of-order timestamps, IPv6, public-key authentication,
 large input, feature aggregation, insufficient model training, deterministic
 model output, dataset labelling, and rejection of invented IP addresses, counts,

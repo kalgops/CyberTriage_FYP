@@ -277,4 +277,5 @@ def generate_pdf_report(report_obj: Dict, detection: Dict, df: pd.DataFrame,
         "security personnel before taking action.")
     
     # Return PDF as bytes
-    return pdf.output(dest='S').encode('latin-1')
+    # fpdf2 returns a bytearray; normalise it to immutable download bytes.
+    return bytes(pdf.output())

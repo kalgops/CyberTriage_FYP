@@ -40,9 +40,13 @@ are pinned in the optional requirements; full observed model/runtime identities 
 
 ## Executed checks and limits
 
-The expanded suite contains **99 passing tests** (83 existing + 15 multimodal
-contract tests + one unfitted-model comparison regression). An unfitted model
+The expanded suite contains **100 passing tests** (83 existing + 15 multimodal
+contract tests + one unfitted-model comparison regression + one PDF-export
+regression using the real fpdf2 backend). An unfitted model
 preserves rule results with `insufficient_training_data` and null anomaly values.
+PDF output normalises the fpdf2 bytearray to bytes for Streamlit downloads.
+The PDF regression exposes legacy fpdf2 deprecation warnings; these do not fail
+the export test and are not claimed to have been eliminated.
 Fifteen curated log fixtures have a separate validation command, not an inflated Pytest count.
 
 ```powershell
