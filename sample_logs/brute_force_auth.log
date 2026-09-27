@@ -1,0 +1,18 @@
+Jun 10 10:01:22 server sshd[1122]: Failed password for root from 192.168.1.45 port 53422 ssh2
+Jun 10 10:01:28 server sshd[1123]: Failed password for root from 192.168.1.45 port 53423 ssh2
+Jun 10 10:01:35 server sshd[1125]: Failed password for invalid user admin from 192.168.1.45 port 53425 ssh2
+Jun 10 10:01:42 server sshd[1126]: Failed password for invalid user admin from 192.168.1.45 port 53426 ssh2
+Jun 10 10:01:49 server sshd[1128]: Failed password for root from 192.168.1.45 port 53428 ssh2
+Jun 10 10:01:56 server sshd[1129]: Failed password for invalid user test from 192.168.1.45 port 53430 ssh2
+Jun 10 10:02:03 server sshd[1131]: Failed password for invalid user test from 192.168.1.45 port 53431 ssh2
+Jun 10 10:02:10 server sshd[1132]: Failed password for invalid user ubuntu from 192.168.1.45 port 53433 ssh2
+Jun 10 10:02:18 server sshd[1134]: Failed password for invalid user ubuntu from 192.168.1.45 port 53434 ssh2
+Jun 10 10:02:25 server sshd[1135]: Failed password for root from 192.168.1.45 port 53436 ssh2
+Jun 10 10:02:33 server sshd[1137]: Failed password for invalid user admin from 192.168.1.45 port 53438 ssh2
+Jun 10 10:02:41 server sshd[1138]: Failed password for invalid user oracle from 192.168.1.45 port 53440 ssh2
+Jun 10 10:02:49 server sshd[1140]: Failed password for invalid user postgres from 192.168.1.45 port 53442 ssh2
+Jun 10 10:02:57 server sshd[1141]: Failed password for root from 192.168.1.45 port 53444 ssh2
+Jun 10 10:03:05 server sshd[1143]: Failed password for invalid user test from 192.168.1.45 port 53446 ssh2
+Jun 10 10:03:14 server sshd[1144]: Failed password for invalid user git from 192.168.1.45 port 53448 ssh2
+Jun 10 10:03:23 server sshd[1146]: Failed password for invalid user ubuntu from 192.168.1.45 port 53450 ssh2
+Jun 10 10:03:31 server sshd[1147]: Failed password for root from 192.168.1.45 port 53452 ssh2

@@ -111,12 +111,14 @@ class IsolationForestBaseline:
 def compare_with_rules(features: pd.DataFrame, rule_detection: Dict[str, object], model: Optional[IsolationForestBaseline]) -> pd.DataFrame:
     """Return aligned per-IP rule and model decisions for the interface."""
     rule_map = {row["source_ip"]: bool(row["flagged"]) for row in rule_detection.get("ip_summaries", [])}
-    if model is None:
+    if model is None or model.model is None:
         out = features.copy()
         out["rule_flagged"] = out["source_ip"].map(rule_map).fillna(False)
         out["isolation_forest_anomaly"] = None
         out["anomaly_score"] = None
-        out["model_status"] = "model_not_loaded"
+        out["model_status"] = "model_not_loaded" if model is None else "insufficient_training_data"
+        if model is not None:
+            out["training_rows"] = model.training_rows
         return out
     predicted = model.predict(features).rename(columns={"is_anomaly": "isolation_forest_anomaly", "status": "model_status"})
     predicted["rule_flagged"] = predicted["source_ip"].map(rule_map).fillna(False)

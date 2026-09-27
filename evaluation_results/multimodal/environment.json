@@ -1,0 +1,47 @@
+{
+  "packages": {
+    "easyocr": "1.7.2",
+    "faster-whisper": "1.2.1",
+    "torch": "2.14.0",
+    "torchvision": "0.29.0",
+    "ctranslate2": "4.8.2"
+  },
+  "weights": [
+    {
+      "path": "easyocr\\craft_mlt_25k.pth",
+      "sha256": "4a5efbfb48b4081100544e75e1e2b57f8de3d84f213004b14b85fd4b3748db17"
+    },
+    {
+      "path": "easyocr\\english_g2.pth",
+      "sha256": "e2272681d9d67a04e2dff396b6e95077bc19001f8f6d3593c307b9852e1c29e8"
+    },
+    {
+      "path": "whisper-base-en\\model.bin",
+      "sha256": "2a166925539a16005f14ff328359f9b9adb9dc4fb631bb3b227526862e93e2ef"
+    }
+  ],
+  "ollama": [
+    {
+      "name": "llama3:latest",
+      "model": "llama3:latest",
+      "modified_at": "2026-06-27T19:45:59.0179594+08:00",
+      "size": 4661224676,
+      "digest": "365c0bd3c000a25d28ddbf732fe1c6add414de7275464c4e4d1c3b5fcb5d8ad1",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "8.0B",
+        "quantization_level": "Q4_0",
+        "context_length": 8192,
+        "embedding_length": 4096
+      },
+      "capabilities": [
+        "completion"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Optional three-domain extension. Keep baseline dependencies independently usable.
+-r requirements.txt
+easyocr==1.7.2
+faster-whisper==1.2.1

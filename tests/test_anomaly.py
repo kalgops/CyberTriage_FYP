@@ -54,3 +54,21 @@ def test_model_prediction_is_reproducible():
     b = anomaly.IsolationForestBaseline(random_state=3070).fit(training).predict(test)
     assert a["is_anomaly"].tolist() == b["is_anomaly"].tolist()
     assert a["anomaly_score"].tolist() == pytest.approx(b["anomaly_score"].tolist())
+
+
+def test_untrained_comparison_preserves_rules_without_inventing_predictions():
+    features = _training_features().head(2)
+    rules = {"ip_summaries": [
+        {"source_ip": features.iloc[0]["source_ip"], "flagged": True},
+        {"source_ip": features.iloc[1]["source_ip"], "flagged": False},
+    ]}
+    result = anomaly.compare_with_rules(features, rules, anomaly.IsolationForestBaseline())
+    assert result["source_ip"].tolist() == features["source_ip"].tolist()
+    assert result["rule_flagged"].tolist() == [True, False]
+    assert result["model_status"].tolist() == ["insufficient_training_data"] * 2
+    assert result["isolation_forest_anomaly"].tolist() == [None, None]
+    assert result["anomaly_score"].tolist() == [None, None]
+    assert result["training_rows"].tolist() == [0, 0]
+    empty = anomaly.compare_with_rules(features.iloc[:0], rules, anomaly.IsolationForestBaseline())
+    assert empty.empty
+    assert "model_status" in empty.columns

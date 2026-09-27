@@ -1,0 +1,7 @@
+Jun 10 08:14:02 server sshd[2001]: Accepted password for kalyan from 192.168.1.20 port 50122 ssh2
+Jun 10 08:31:47 server sshd[2014]: Accepted password for deploy from 192.168.1.21 port 50890 ssh2
+Jun 10 09:02:11 server sshd[2099]: Failed password for kalyan from 192.168.1.20 port 51001 ssh2
+Jun 10 09:02:19 server sshd[2100]: Accepted password for kalyan from 192.168.1.20 port 51001 ssh2
+Jun 10 10:45:33 server sshd[2210]: Accepted password for backup from 10.0.0.5 port 44210 ssh2
+Jun 10 11:12:08 server sshd[2255]: Failed password for deploy from 10.0.0.8 port 44550 ssh2
+Jun 10 11:58:40 server sshd[2301]: Accepted password for kalyan from 192.168.1.20 port 52310 ssh2

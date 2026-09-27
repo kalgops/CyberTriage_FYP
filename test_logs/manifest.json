@@ -1,0 +1,92 @@
+[
+  {
+    "file": "01_normal_login.log",
+    "expected_class": "Normal Activity",
+    "expected_severity": "None",
+    "purpose": "Normal successful authentications"
+  },
+  {
+    "file": "02_occasional_mistakes.log",
+    "expected_class": "Normal Activity",
+    "expected_severity": "None",
+    "purpose": "Two failures do not reach the rule threshold"
+  },
+  {
+    "file": "03_low_threshold_3_failures.log",
+    "expected_class": "Suspicious Login Pattern",
+    "expected_severity": "Low",
+    "purpose": "Exact low boundary, one username"
+  },
+  {
+    "file": "04_medium_threshold_5_failures.log",
+    "expected_class": "Possible SSH Brute Force Attempt",
+    "expected_severity": "Medium",
+    "purpose": "Exact medium boundary"
+  },
+  {
+    "file": "05_high_threshold_10_failures.log",
+    "expected_class": "Possible SSH Brute Force Attempt",
+    "expected_severity": "High",
+    "purpose": "Exact high boundary"
+  },
+  {
+    "file": "06_multi_username_escalation.log",
+    "expected_class": "Possible SSH Brute Force Attempt",
+    "expected_severity": "Medium",
+    "purpose": "Three failures across three users escalate Low to Medium"
+  },
+  {
+    "file": "07_password_spraying.log",
+    "expected_class": "Possible SSH Brute Force Attempt",
+    "expected_severity": "High",
+    "purpose": "One failure per account; multi-user escalation; not proof that a common password was used"
+  },
+  {
+    "file": "08_slow_brute_force.log",
+    "expected_class": "Possible SSH Brute Force Attempt",
+    "expected_severity": "High",
+    "purpose": "Count rule flags ten failures spread across nine hours; no rolling-window semantics"
+  },
+  {
+    "file": "09_success_after_failures.log",
+    "expected_class": "Possible SSH Brute Force Attempt",
+    "expected_severity": "Medium",
+    "purpose": "Success remains separate; classifier does not infer account compromise"
+  },
+  {
+    "file": "10_legitimate_automation.log",
+    "expected_class": "Normal Activity",
+    "expected_severity": "None",
+    "purpose": "Synthetic authorised automation; high volume alone does not trigger rules"
+  },
+  {
+    "file": "11_multiple_source_ips.log",
+    "expected_class": "Possible SSH Brute Force Attempt",
+    "expected_severity": "High",
+    "purpose": "Leading suspicious IP isolated from two other sources"
+  },
+  {
+    "file": "12_ipv6_authentication.log",
+    "expected_class": "Suspicious Login Pattern",
+    "expected_severity": "Low",
+    "purpose": "Valid documentation IPv6 address"
+  },
+  {
+    "file": "13_public_key_success.log",
+    "expected_class": "Normal Activity",
+    "expected_severity": "None",
+    "purpose": "Public-key success is recognised"
+  },
+  {
+    "file": "14_malformed_unknown_lines.log",
+    "expected_class": "Parsing Error / Insufficient Evidence",
+    "expected_severity": "None",
+    "purpose": "All three lines retained as unknown"
+  },
+  {
+    "file": "15_out_of_order_timestamps.log",
+    "expected_class": "Suspicious Login Pattern",
+    "expected_severity": "Low",
+    "purpose": "Earliest 10:01:00; latest 10:10:00 independent of line order"
+  }
+]

@@ -1,0 +1,12 @@
+Jun 10 10:00:00 lab sshd[1001]: Failed password for root from 192.0.2.10 port 2200 ssh2
+Jun 10 10:00:01 lab sshd[1001]: Failed password for root from 192.0.2.10 port 2200 ssh2
+Jun 10 10:00:02 lab sshd[1001]: Failed password for root from 192.0.2.10 port 2200 ssh2
+Jun 10 10:00:03 lab sshd[1001]: Failed password for root from 192.0.2.10 port 2200 ssh2
+Jun 10 10:00:04 lab sshd[1001]: Failed password for root from 192.0.2.10 port 2200 ssh2
+Jun 10 10:00:05 lab sshd[1001]: Failed password for root from 192.0.2.10 port 2200 ssh2
+Jun 10 10:00:06 lab sshd[1001]: Failed password for root from 192.0.2.10 port 2200 ssh2
+Jun 10 10:00:07 lab sshd[1001]: Failed password for root from 192.0.2.10 port 2200 ssh2
+Jun 10 10:00:08 lab sshd[1001]: Failed password for root from 192.0.2.10 port 2200 ssh2
+Jun 10 10:00:09 lab sshd[1001]: Failed password for root from 192.0.2.10 port 2200 ssh2
+Jun 10 10:00:02 lab sshd[1001]: Accepted password for alice from 198.51.100.20 port 2200 ssh2
+Jun 10 10:00:04 lab sshd[1001]: Failed password for bob from 198.51.100.30 port 2200 ssh2

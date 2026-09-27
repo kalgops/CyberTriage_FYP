@@ -6,6 +6,9 @@ __pycache__/
 .streamlit/
 .env
 *.log
+!test_logs/*.log
+!sample_logs/*.log
 dist/
 build/
+models/
 
