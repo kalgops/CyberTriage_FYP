@@ -1,0 +1,9 @@
+category,scenarios,positives,threshold_correct,isolation_forest_correct
+concentrated_brute_force,10,10,10,6
+legitimate_automation,2,0,2,2
+malformed,10,0,10,10
+normal,2,0,2,1
+occasional_mistakes,2,0,2,2
+password_spraying,10,10,10,0
+slow_brute_force,10,10,10,0
+success_after_failures,10,10,10,0
